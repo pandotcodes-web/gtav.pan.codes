@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA V Cheat Codes Reference</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .table-container {
+            padding: 30px;
+            overflow-x: auto;
+        }
+        
+        .category {
+            margin-bottom: 40px;
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px 10px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e3f2fd;
+            transform: translateY(-1px);
+            transition: all 0.2s ease;
+        }
+        
+        .code {
+            font-family: 'Courier New', monospace;
+            background: #34495e;
+            color: #ecf0f1;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .code:hover {
+            background: #2c3e50;
+        }
+        
+        .button-sequence {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            align-items: center;
+        }
+        
+        .btn-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 11px;
+            margin: 1px;
+        }
+        
+        .btn-icon.xbox {
+            background: #107c10;
+        }
+        
+        .btn-icon.playstation {
+            background: #003087;
+        }
+        
+        .btn-icon.direction {
+            background: #666;
+        }
+        
+        /* PlayStation specific colors */
+        .btn-icon.triangle { color: #7bc142; }
+        .btn-icon.square { color: #f14a8a; }
+        .btn-icon.circle { color: #f14a8a; }
+        .btn-icon.cross { color: #5294cf; }
+        .btn-icon.l1, .btn-icon.l2 { color: #34495e; }
+        .btn-icon.r1, .btn-icon.r2 { color: #34495e; }
+        
+        /* Xbox specific colors */
+        .btn-icon.a { background: #7bc142; }
+        .btn-icon.b { background: #e74c3c; }
+        .btn-icon.x { background: #5294cf; }
+        .btn-icon.y { background: #f39c12; }
+        .btn-icon.lb, .btn-icon.lt { background: #34495e; }
+        .btn-icon.rb, .btn-icon.rt { background: #34495e; }
+        
+        .search-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        #searchBox {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #3498db;
+            border-radius: 25px;
+            width: 100%;
+            max-width: 400px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        
+        #searchBox:focus {
+            border-color: #2980b9;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+        
+        .footer-note {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .table-container { padding: 15px; }
+            th, td { padding: 8px 6px; font-size: 0.9rem; }
+            .btn-icon { width: 20px; height: 20px; font-size: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 GTA V Cheat Codes</h1>
+            <p>Complete reference for all platforms - PC, PlayStation, and Xbox</p>
+        </div>
+        
+        <div class="table-container">
+            <div class="search-container">
+                <input type="text" id="searchBox" placeholder="🔍 Search cheat codes...">
+            </div>
+            
+            <div id="categories-container">
+                <!-- Categories will be dynamically generated here -->
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <p>💡 <strong>Note:</strong> Using cheats will disable achievements/trophies for that session.</p>
+            <p>Some vehicle codes require completing specific challenges first.</p>
+        </div>
+    </div>
+
+    <script>
+        // Cheat codes data source
+        const cheatCodes = [
+            // Gameplay Codes
+            {
+                category: "Gameplay",
+                name: "Make Immortal",
+                code: "PAINKILLER",
+                playstation: "Right,Cross,Right,Left,Right,R1,Right,Left,Cross,Triangle",
+                xbox: "Right,A,Right,Left,Right,RB,Right,Left,A,Y"
+            },
+            {
+                category: "Gameplay",
+                name: "Recharge Health & Armor",
+                code: "TURTLE",
+                playstation: "Circle,L1,Triangle,R2,Cross,Square,Circle,Right,Square,L1,L1,L1",
+                xbox: "B,LB,Y,RT,A,X,B,Right,X,LB,LB,LB"
+            },
+            {
+                category: "Gameplay",
+                name: "Increase Wanted Level",
+                code: "FUGITIVE",
+                playstation: "R1,R1,Circle,R2,Left,Right,Left,Right,Left,Right",
+                xbox: "RB,RB,B,RT,Left,Right,Left,Right,Left,Right"
+            },
+            {
+                category: "Gameplay",
+                name: "Reduce Wanted Level",
+                code: "LAWYERUP",
+                playstation: "R1,R1,Circle,R2,Right,Left,Right,Left,Right,Left",
+                xbox: "RB,RB,B,RT,Right,Left,Right,Left,Right,Left"
+            },
+            {
+                category: "Gameplay",
+                name: "Recharge Special Ability",
+                code: "POWERUP",
+                playstation: "Cross,Cross,Square,R1,L1,Cross,Right,Left,Cross",
+                xbox: "A,A,X,RB,LB,A,Right,Left,A"
+            },
+            {
+                category: "Gameplay",
+                name: "Drunk Mode",
+                code: "LIQUOR",
+                playstation: "Triangle,Right,Right,Left,Right,Square,Circle,Left",
+                xbox: "Y,Right,Right,Left,Right,X,B,Left"
+            },
+            {
+                category: "Gameplay",
+                name: "Slow Motion Mode",
+                code: "SLOWMO",
+                playstation: "Triangle,Left,Left,Right,Right,Square,R2,R1",
+                xbox: "Y,Left,Left,Right,Right,X,RT,RB"
+            },
+            {
+                category: "Gameplay",
+                name: "Slow Motion Aiming",
+                code: "DEADEYE",
+                playstation: "Square,L2,R1,Triangle,Left,Square,L2,Right,Cross",
+                xbox: "X,LT,RB,Y,Left,X,LT,Right,A"
+            },
+            {
+                category: "Gameplay",
+                name: "Fast Run",
+                code: "CATCHME",
+                playstation: "Triangle,Left,Left,Right,Right,L2,L1,Square",
+                xbox: "Y,Left,Left,Right,Right,LT,LB,X"
+            },
+            {
+                category: "Gameplay",
+                name: "Fast Swim",
+                code: "GOTGILLS",
+                playstation: "Left,Left,L1,Right,Right,R2,Left,L2,Right",
+                xbox: "Left,Left,LB,Right,Right,RT,Left,LT,Right"
+            },
+            {
+                category: "Gameplay",
+                name: "Super Jump",
+                code: "HOPTOIT",
+                playstation: "Square,Circle,Circle,L2,Square,Square,Left,Right,Cross",
+                xbox: "LT,LT,X,B,B,LT,X,X,X,Left,Right,A"
+            },
+            {
+                category: "Gameplay",
+                name: "Parachute",
+                code: "SKYDIVE",
+                playstation: "Left,Right,L1,L2,R1,R2,R2,Left,Left,Right,L1",
+                xbox: "Left,Right,LB,LT,RB,RT,RT,Left,Left,Right,LB"
+            },
+            {
+                category: "Gameplay",
+                name: "Skyfall",
+                code: "SKYFALL",
+                playstation: "L1,L2,R1,R2,Left,Right,Left,Right,L1,L2,R1,R2,Left,Right,Left,Right",
+                xbox: "LB,LT,RB,RT,Left,Right,Left,Right,LB,LT,RB,RT,Left,Right,Left,Right"
+            },
+            {
+                category: "Gameplay",
+                name: "Change Gravity",
+                code: "FLOATER",
+                playstation: "Left,Left,L1,R1,L1,Right,Left,L1,Left",
+                xbox: "Left,Left,LB,RB,LB,Right,Left,LB,Left"
+            },
+            {
+                category: "Gameplay",
+                name: "Change Weather",
+                code: "MAKEITRAIN",
+                playstation: "R2,Cross,L1,L1,L2,L2,L2,Square",
+                xbox: "RT,A,LB,LB,LT,LT,LT,X"
+            },
+            {
+                category: "Gameplay",
+                name: "Slippery Cars",
+                code: "SNOWDAY",
+                playstation: "Triangle,R1,R1,Left,R1,L1,R2,L1",
+                xbox: "Y,RB,RB,Left,RB,LB,RT,LB"
+            },
+
+            // Vehicle Codes
+            {
+                category: "Vehicle",
+                name: "BMX Bike",
+                code: "BANDIT",
+                playstation: "Left,Left,Right,Right,Right,Left,Right,Square,Circle,Triangle,R1,R2",
+                xbox: "Left,Left,Right,Right,Right,Left,Right,X,B,Y,RB,RT"
+            },
+            {
+                category: "Vehicle",
+                name: "Stunt Plane",
+                code: "BARNSTORM",
+                playstation: "Circle,Right,L1,L2,Left,R1,L1,L1,Left,Left,Cross,Triangle",
+                xbox: "B,Right,LB,LT,Left,RB,LB,LB,Left,Left,A,Y"
+            },
+            {
+                category: "Vehicle",
+                name: "Buzzard Helicopter",
+                code: "BUZZOFF",
+                playstation: "Circle,Circle,L1,Circle,Circle,Circle,L1,L2,R1,Triangle,Circle,Triangle",
+                xbox: "B,B,LB,B,B,B,LB,LT,RB,Y,B,Y"
+            },
+            {
+                category: "Vehicle",
+                name: "Comet Sports Car",
+                code: "COMET",
+                playstation: "R1,Circle,R2,Right,L1,L2,Cross,Cross,Square,R1",
+                xbox: "RB,B,RT,Right,LB,LT,A,A,X,RB"
+            },
+            {
+                category: "Vehicle",
+                name: "Duster Plane",
+                code: "FLYSPRAY",
+                playstation: "Right,Left,R1,R1,Left,Triangle,Triangle,Cross,Circle,L1",
+                xbox: "Right,Left,RB,RB,Left,Y,Y,A,B,LB"
+            },
+            {
+                category: "Vehicle",
+                name: "Sanchez Motorbike",
+                code: "OFFROAD",
+                playstation: "Left,Left,Right,Right,Left,Right,Square,Circle,Triangle,R1,R2",
+                xbox: "Left,Left,Right,Right,Left,Right,X,B,Y,RB,RT"
+            },
+            {
+                category: "Vehicle",
+                name: "Rapid GT Car",
+                code: "RAPIDGT",
+                playstation: "R2,L1,Circle,Right,L1,R1,Right,Left,Circle,R2",
+                xbox: "RT,LB,B,Right,LB,RB,Right,Left,B,RT"
+            },
+            {
+                category: "Vehicle",
+                name: "PCJ-600 Motorbike",
+                code: "ROCKET",
+                playstation: "R1,Right,Left,R2,Left,Right,Square,L2,L1",
+                xbox: "RB,Right,Left,RT,Left,Right,X,LT,LB"
+            },
+            {
+                category: "Vehicle",
+                name: "Garbage Truck",
+                code: "TRASHED",
+                playstation: "Circle,R1,Circle,R1,Left,Left,R1,L1,Circle,Right",
+                xbox: "B,RB,B,RB,Left,Left,RB,LB,B,Right"
+            },
+            {
+                category: "Vehicle",
+                name: "Limousine",
+                code: "VINEWOOD",
+                playstation: "R2,Right,L2,Left,Left,R1,L1,Circle,Right",
+                xbox: "RT,Right,LT,Left,Left,RB,LB,B,Right"
+            },
+
+            // Weapon Codes
+            {
+                category: "Weapon",
+                name: "Explosive Punches",
+                code: "HOTHANDS",
+                playstation: "Right,Left,Cross,Triangle,R1,Circle,Circle,Circle,L2",
+                xbox: "Right,Left,A,Y,RB,B,B,B,LT"
+            },
+            {
+                category: "Weapon",
+                name: "Explosive Ammo",
+                code: "HIGHEX",
+                playstation: "Right,Square,Cross,Left,R1,R2,Left,Right,Right,L1,L1,L1",
+                xbox: "Right,X,A,Left,RB,RT,Left,Right,Right,LB,LB,LB"
+            },
+            {
+                category: "Weapon",
+                name: "Incendiary Rounds",
+                code: "FIRE",
+                playstation: "L1,R1,Square,R1,Left,R2,R1,Left,Square,Right,L1,L1",
+                xbox: "LB,RB,X,RB,Left,RT,RB,Left,X,Right,LB,LB"
+            },
+            {
+                category: "Weapon",
+                name: "Give All Weapons",
+                code: "TOOLUP",
+                playstation: "Triangle,R2,Left,L1,Cross,Right,Triangle,Down,Square,L1,L1,L1",
+                xbox: "Y,RT,Left,LB,A,Right,Y,Down,X,LB,LB,LB"
+            }
+        ];
+
+        // Button mapping for display
+        const buttonMapping = {
+            // Directions
+            'Up': '↑', 'Down': '↓', 'Left': '←', 'Right': '→',
+            
+            // PlayStation
+            'Triangle': '△', 'Square': '□', 'Circle': '○', 'Cross': '✕',
+            'L1': 'L1', 'L2': 'L2', 'R1': 'R1', 'R2': 'R2',
+            
+            // Xbox
+            'A': 'A', 'B': 'B', 'X': 'X', 'Y': 'Y',
+            'LB': 'LB', 'LT': 'LT', 'RB': 'RB', 'RT': 'RT'
+        };
+
+        // Category icons
+        const categoryIcons = {
+            'Gameplay': '🎯',
+            'Vehicle': '🚗',
+            'Weapon': '🔫'
+        };
+
+        function createButtonElement(buttonName, platform) {
+            const span = document.createElement('span');
+            span.className = `btn-icon ${buttonName.toLowerCase()}`;
+            
+            // Add platform-specific classes
+            if (['Triangle', 'Square', 'Circle', 'Cross', 'L1', 'L2', 'R1', 'R2'].includes(buttonName)) {
+                span.classList.add('playstation');
+            } else if (['A', 'B', 'X', 'Y', 'LB', 'LT', 'RB', 'RT'].includes(buttonName)) {
+                span.classList.add('xbox');
+            } else if (['Up', 'Down', 'Left', 'Right'].includes(buttonName)) {
+                span.classList.add('direction');
+            }
+            
+            span.textContent = buttonMapping[buttonName] || buttonName;
+            return span;
+        }
+
+        function createButtonSequence(buttonString, platform) {
+            const container = document.createElement('div');
+            container.className = 'button-sequence';
+            
+            if (!buttonString) return container;
+            
+            const buttons = buttonString.split(',');
+            buttons.forEach(button => {
+                const buttonElement = createButtonElement(button.trim(), platform);
+                container.appendChild(buttonElement);
+            });
+            
+            return container;
+        }
+
+        function generateTables() {
+            const container = document.getElementById('categories-container');
+            const categories = [...new Set(cheatCodes.map(code => code.category))];
+            
+            categories.forEach(categoryName => {
+                // Create category section
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category';
+                
+                // Category title
+                const titleH2 = document.createElement('h2');
+                titleH2.className = 'category-title';
+                titleH2.textContent = `${categoryIcons[categoryName] || '📝'} ${categoryName} Codes`;
+                categoryDiv.appendChild(titleH2);
+                
+                // Create table
+                const table = document.createElement('table');
+                
+                // Table header
+                const thead = document.createElement('thead');
+                const headerRow = document.createElement('tr');
+                ['Name', 'PC Code', 'PlayStation Buttons', 'Xbox Buttons'].forEach(headerText => {
+                    const th = document.createElement('th');
+                    th.textContent = headerText;
+                    headerRow.appendChild(th);
+                });
+                thead.appendChild(headerRow);
+                table.appendChild(thead);
+                
+                // Table body
+                const tbody = document.createElement('tbody');
+                const categoryData = cheatCodes.filter(code => code.category === categoryName);
+                
+                categoryData.forEach(cheat => {
+                    const row = document.createElement('tr');
+                    
+                    // Name cell
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = cheat.name;
+                    row.appendChild(nameCell);
+                    
+                    // Code cell
+                    const codeCell = document.createElement('td');
+                    const codeSpan = document.createElement('span');
+                    codeSpan.className = 'code';
+                    codeSpan.textContent = cheat.code;
+                    codeSpan.title = 'Click to copy';
+                    codeCell.appendChild(codeSpan);
+                    row.appendChild(codeCell);
+                    
+                    // PlayStation buttons cell
+                    const psCell = document.createElement('td');
+                    psCell.appendChild(createButtonSequence(cheat.playstation, 'playstation'));
+                    row.appendChild(psCell);
+                    
+                    // Xbox buttons cell
+                    const xboxCell = document.createElement('td');
+                    xboxCell.appendChild(createButtonSequence(cheat.xbox, 'xbox'));
+                    row.appendChild(xboxCell);
+                    
+                    tbody.appendChild(row);
+                });
+                
+                table.appendChild(tbody);
+                categoryDiv.appendChild(table);
+                container.appendChild(categoryDiv);
+            });
+        }
+
+        function setupEventListeners() {
+            // Copy to clipboard functionality
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('code')) {
+                    navigator.clipboard.writeText(e.target.textContent).then(() => {
+                        const original = e.target.textContent;
+                        e.target.textContent = 'Copied!';
+                        e.target.style.background = '#27ae60';
+                        setTimeout(() => {
+                            e.target.textContent = original;
+                            e.target.style.background = '#34495e';
+                        }, 1000);
+                    });
+                }
+            });
+
+            // Search functionality
+            const searchInput = document.getElementById('searchBox');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const rows = document.querySelectorAll('tbody tr');
+                
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        row.style.display = '';
+                        row.style.backgroundColor = searchTerm ? '#fff3cd' : '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            generateTables();
+            setupEventListeners();
+            document.documentElement.style.scrollBehavior = 'smooth';
+        });
+    </script>
+</body>
+</html>
