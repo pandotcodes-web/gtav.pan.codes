@@ -130,37 +130,41 @@
             justify-content: center;
             color: white;
             font-weight: bold;
-            font-size: 11px;
+            font-size: 16px;
             margin: 1px;
+            padding-bottom: 4px;
         }
         
         .btn-icon.xbox {
-            background: #107c10;
+            background: #2b343d;
         }
         
         .btn-icon.playstation {
-            background: #003087;
+            background: #2b343d;
         }
         
         .btn-icon.direction {
             background: #666;
         }
         
+        .l1, .l2, .r1, .r2, .rb, .rt, .lb, .lt {
+            background: #34495e;
+            height: 24px;
+            width: 32px;
+            border-radius: 25%;
+        }
+
         /* PlayStation specific colors */
-        .btn-icon.triangle { color: #7bc142; }
-        .btn-icon.square { color: #f14a8a; }
-        .btn-icon.circle { color: #f14a8a; }
-        .btn-icon.cross { color: #5294cf; }
-        .btn-icon.l1, .btn-icon.l2 { color: #34495e; }
-        .btn-icon.r1, .btn-icon.r2 { color: #34495e; }
+        .btn-icon.triangle { background: #00AA00; transform: scale(1, -1); padding: 0; }
+        .btn-icon.square { background: #AA00AA; padding-bottom: 2px; }
+        .btn-icon.circle { background: #AA0000; padding-bottom: 2px; }
+        .btn-icon.cross { background: #0000AA; }
         
         /* Xbox specific colors */
-        .btn-icon.a { background: #7bc142; }
-        .btn-icon.b { background: #e74c3c; }
-        .btn-icon.x { background: #5294cf; }
-        .btn-icon.y { background: #f39c12; }
-        .btn-icon.lb, .btn-icon.lt { background: #34495e; }
-        .btn-icon.rb, .btn-icon.rt { background: #34495e; }
+        .btn-icon.a { background: #00AA00; }
+        .btn-icon.b { background: #AA0000; }
+        .btn-icon.x { background: #0000AA; }
+        .btn-icon.y { background: #AAAA00; }
         
         .search-container {
             margin-bottom: 20px;
@@ -444,10 +448,10 @@
         // Button mapping for display
         const buttonMapping = {
             // Directions
-            'Up': '↑', 'Down': '↓', 'Left': '←', 'Right': '→',
+            'Up': '🠉', 'Down': '🠋', 'Left': '🠈', 'Right': '🠊',
             
             // PlayStation
-            'Triangle': '△', 'Square': '□', 'Circle': '○', 'Cross': '✕',
+            'Triangle': '⛛', 'Square': '🞒', 'Circle': '🞇', 'Cross': '✕',
             'L1': 'L1', 'L2': 'L2', 'R1': 'R1', 'R2': 'R2',
             
             // Xbox
