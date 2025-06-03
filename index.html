@@ -200,6 +200,14 @@
             th, td { padding: 8px 6px; font-size: 0.9rem; }
             .btn-icon { width: 20px; height: 20px; font-size: 10px; }
         }
+
+        .image-cell {
+            padding: 0;
+        }
+        .image-cell img {
+            
+            display:block;
+        }
     </style>
 </head>
 <body>
@@ -344,6 +352,7 @@
 
             // Vehicle Codes
             {
+                image: "img/BMX-GTAV-PandMCycles.png",
                 category: "Vehicle",
                 name: "BMX Bike",
                 code: "BANDIT",
@@ -351,6 +360,7 @@
                 xbox: "Left,Left,Right,Right,Right,Left,Right,X,B,Y,RB,RT"
             },
             {
+                image: "img/image-removebg-preview (10).png",
                 category: "Vehicle",
                 name: "Stunt Plane",
                 code: "BARNSTORM",
@@ -358,6 +368,7 @@
                 xbox: "B,Right,LB,LT,Left,RB,LB,LB,Left,Left,A,Y"
             },
             {
+                image: "img/Image_Editor.png",
                 category: "Vehicle",
                 name: "Buzzard Helicopter",
                 code: "BUZZOFF",
@@ -365,6 +376,7 @@
                 xbox: "B,B,LB,B,B,B,LB,LT,RB,Y,B,Y"
             },
             {
+                image: "img/Image_Editor (2).png",
                 category: "Vehicle",
                 name: "Comet Sports Car",
                 code: "COMET",
@@ -372,6 +384,7 @@
                 xbox: "RB,B,RT,Right,LB,LT,A,A,X,RB"
             },
             {
+                image: "img/Image_Editor (3).png",
                 category: "Vehicle",
                 name: "Duster Plane",
                 code: "FLYSPRAY",
@@ -379,6 +392,7 @@
                 xbox: "Right,Left,RB,RB,Left,Y,Y,A,B,LB"
             },
             {
+                image: "img/Image_Editor (4).png",
                 category: "Vehicle",
                 name: "Sanchez Motorbike",
                 code: "OFFROAD",
@@ -386,6 +400,7 @@
                 xbox: "Left,Left,Right,Right,Left,Right,X,B,Y,RB,RT"
             },
             {
+                image: "img/Image_Editor (5).png",
                 category: "Vehicle",
                 name: "Rapid GT Car",
                 code: "RAPIDGT",
@@ -393,6 +408,7 @@
                 xbox: "RT,LB,B,Right,LB,RB,Right,Left,B,RT"
             },
             {
+                image: "img/Image_Editor (6).png",
                 category: "Vehicle",
                 name: "PCJ-600 Motorbike",
                 code: "ROCKET",
@@ -400,6 +416,7 @@
                 xbox: "RB,Right,Left,RT,Left,Right,X,LT,LB"
             },
             {
+                image: "img/Image_Editor (7).png",
                 category: "Vehicle",
                 name: "Garbage Truck",
                 code: "TRASHED",
@@ -407,6 +424,7 @@
                 xbox: "B,RB,B,RB,Left,Left,RB,LB,B,Right"
             },
             {
+                image: "img/Image_Editor (8).png",
                 category: "Vehicle",
                 name: "Limousine",
                 code: "VINEWOOD",
@@ -519,6 +537,11 @@
                 // Table header
                 const thead = document.createElement('thead');
                 const headerRow = document.createElement('tr');
+                if (categoryName === "Vehicle") {
+                    const imgHeader = document.createElement('th');
+                    imgHeader.textContent = 'Image';
+                    headerRow.appendChild(imgHeader);
+                }
                 ['Name', 'PC Code', 'PlayStation Buttons', 'Xbox Buttons'].forEach(headerText => {
                     const th = document.createElement('th');
                     th.textContent = headerText;
@@ -534,6 +557,19 @@
                 categoryData.forEach(cheat => {
                     const row = document.createElement('tr');
                     
+                    if(cheat.image) {
+                        // Image cell
+                        const imgCell = document.createElement('td');
+                        const img = document.createElement('img');
+                        img.src = cheat.image;
+                        img.alt = cheat.name;
+                        img.style.width = 'auto';
+                        img.style.height = '85px';
+                        imgCell.classList.add('image-cell');
+                        imgCell.appendChild(img);
+                        row.appendChild(imgCell);
+                    }
+
                     // Name cell
                     const nameCell = document.createElement('td');
                     nameCell.textContent = cheat.name;
